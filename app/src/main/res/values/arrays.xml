@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //team
+    <string-array name="radio_buttons">
+        <item>Bkash</item>
+        <item>Nagad</item>
+        <item>Rocket</item>
+    </string-array>
+    <string-array name="payment___">
+        <item>Bkash</item>
+        <item>Nagad</item>
+        <item>Rocket</item>
+    </string-array>
+    <!-- Reply Preference -->
+
+    //
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    //
+
+</resources>

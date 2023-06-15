@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/stats"
+    tools:context="com.messas.bdshopbazargardennurserybd.AllCateGoryies"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/gradient_background"
+            android:minHeight="?attr/actionBarSize">
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbarwrap"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dailyCheckCard"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image1"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/alltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:id="@+id/text1"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="অল আইটেম"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/taskCard"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image2"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/flowers" />
+
+
+                        <TextView
+                            android:layout_below="@id/image2"
+                            android:id="@+id/text2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="অফার আইটেম"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/taskCard6"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image3"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/mango" />
+
+
+                        <TextView
+                            android:layout_below="@id/image3"
+                          android:id="@+id/mytext3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="আম"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            ////2
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dailyCheckddCard"
+                    android:layout_width="0dp"
+                    android:onClick="add_balance"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image4"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/fruit" />
+
+
+                        <TextView
+                            android:layout_below="@id/image4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext4"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="দেশি ফল"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number5"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image5"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/flowwee" />
+
+
+                        <TextView
+                            android:layout_below="@id/image5"
+                            android:id="@+id/mytext5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ফুল গাছ"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number116"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image6"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/seed" />
+
+
+                        <TextView
+                            android:layout_below="@id/image6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext6"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="বীজ"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            //3
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number7"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image7"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/fruit" />
+
+
+                        <TextView
+                            android:layout_below="@id/image7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext7"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="বিদেশী ফল"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number8"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image8"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/seeding" />
+
+
+                        <TextView
+                            android:layout_below="@id/image8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                         android:id="@+id/mytext8"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ব্যাগ ও টব"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number9"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image9"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/indoorplants" />
+
+
+                        <TextView
+                            android:layout_below="@id/image9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext9"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ইনডোর প্ল্যান্ট"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            //4
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number10"
+                    android:layout_width="0dp"
+                    android:onClick="add_balance"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image10"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/tananasoil" />
+
+
+                        <TextView
+                            android:layout_below="@id/image10"
+                       android:id="@+id/mytext10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="সার জাতীয়"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number11"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image11"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/herbaltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image11"
+                            android:layout_width="match_parent"
+                          android:id="@+id/mytext11"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="মেডিসিন"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number12"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image12"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/ff" />
+
+
+                        <TextView
+                            android:layout_below="@id/image12"
+                           android:id="@+id/mytext12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ফল সহ গাছ"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>//5
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number13"
+                    android:layout_width="0dp"
+                    android:onClick="add_balance"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image13"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/fttrr" />
+
+
+                        <TextView
+                           android:id="@+id/mytext13"
+                            android:layout_below="@id/image13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text='১ মাসে ফুল \nআসবে এমন ট্রি'
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number14"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image14"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/fttrr" />
+
+
+                        <TextView
+                            android:layout_below="@id/image14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                           android:id="@+id/mytext14"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ফুল সহ"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number15"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image15"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/alltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image15"
+                           android:id="@+id/mytext15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="পাইকারি আইটেম"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>//6
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number16"
+                    android:layout_width="0dp"
+                    android:onClick="add_balance"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image16"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/alltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image16"
+                           android:id="@+id/mytext16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="এক্সে সোরিজ"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number17"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image17"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/tea" />
+
+
+                        <TextView
+                            android:layout_below="@id/image17"
+                            android:id="@+id/mytext17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="মশলা জাতীয়"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number18"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image18"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/coconuttree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image18"
+                           android:id="@+id/mytext18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="নারকেল জাতীয়"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>//7
+            <LinearLayout
+                android:layout_marginBottom="100dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                /////
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number19"
+                    android:layout_width="0dp"
+                    android:onClick="add_balance"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image19"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/cactus" />
+
+
+                        <TextView
+                            android:layout_below="@id/image19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext19"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="ক্যাক্টাস"
+                            android:gravity="center_horizontal" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number20"
+                    android:layout_width="0dp"
+
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image20"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/alltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image20"
+                            android:id="@+id/mytext20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="সার্ভিস"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/number21"
+
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#fff"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:foregroundTint="@color/white"
+                            android:layout_width="50dp"
+                            android:id="@+id/image21"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_height="@dimen/space_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:src="@drawable/alltree" />
+
+
+                        <TextView
+                            android:layout_below="@id/image21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="false"
+                            android:padding="8dp"
+                            android:id="@+id/mytext21"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_drawer_header_selection_subtext"
+                            android:fontFamily="@font/josefinsans_semibold"
+                            android:text="কম্বো প্যাক"
+                            android:gravity="center_horizontal" />
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.messas.starlifeuser_user_user">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity10"></activity>
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.AllcategoruySearch"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.UpdatePinActivity"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.AboutCompany"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.AllCateGoryies"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.MeToo"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.Connect"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.Others"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.Bags111"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity5"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.MeToo" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity4"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.Connect" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity3"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.Others" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity2"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.Bags111" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity1"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.Tshirts" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.Tshirts"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.IndividualProductActivity"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.ShoesActivity" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.ShoesActivity"
+            android:parentActivityName="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.OrderTrackActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.OrderHistoryActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.WishlistActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.OrderPlacedActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.ProfileActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.CheckoutActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.CartActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.Register2" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.LoginActivity" />
+        <activity android:name="com.messas.bdshopbazargardennurserybd.HomeACTIVITY" />
+        <activity
+            android:name="com.messas.bdshopbazargardennurserybd.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

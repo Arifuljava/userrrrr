@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/profile_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.messas.bdshopbazargardennurserybd.AboutCompany">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@drawable/gradient_background"
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_below="@id/image21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="false"
+                android:padding="8dp"
+                android:id="@+id/mytext21"
+                android:layout_marginLeft="0dp"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/material_drawer_header_selection_subtext"
+                android:fontFamily="@font/josefinsans_semibold"
+                android:text="কম্বো প্যাক"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
