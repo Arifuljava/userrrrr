@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="com.messas.bdshopbazargardennurserybd.Register2">
+    tools:context="com.messas.kikikikikikik.Register2">
 
     <ImageView
         android:layout_width="0dp"

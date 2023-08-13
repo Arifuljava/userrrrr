@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context="com.messas.bdshopbazargardennurserybd.IndividualProductActivity">
+    tools:context="com.messas.kikikikikikik.IndividualProductActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbarwrap"

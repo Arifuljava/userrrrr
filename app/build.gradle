@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 android {
 
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\aripu\\AndroidStudioProjects\\NurChage\\kikko.jks')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+    }
     compileSdkVersion 33
     buildToolsVersion "33.0.0"
     lintOptions {
@@ -11,8 +19,8 @@ android {
         applicationId "com.messas.bdshopbazargardennurserybd"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 10
-        versionName "10.0"
+        versionCode 45
+        versionName "45.0"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -23,6 +31,7 @@ android {
             minifyEnabled false
             multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

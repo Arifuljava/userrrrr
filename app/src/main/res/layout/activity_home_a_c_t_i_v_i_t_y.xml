@@ -8,7 +8,7 @@
     app:itemIconTint="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.messas.bdshopbazargardennurserybd.HomeACTIVITY">
+    tools:context="com.messas.kikikikikikik.HomeACTIVITY">
 
     <RelativeLayout
         android:background="#fff"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="com.messas.bdshopbazargardennurserybd.LoginActivity">
+    tools:context="com.messas.kikikikikikik.LoginActivity">
 
     <ImageView
         android:layout_width="0dp"

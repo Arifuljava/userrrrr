@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/stats"
-    tools:context="com.messas.bdshopbazargardennurserybd.CartFragment"
+    tools:context="com.messas.kikikikikikik.CartFragment"
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
