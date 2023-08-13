@@ -192,7 +192,7 @@ public class Cart2Activity extends AppCompatActivity {
                         String prprice=document.getString("prprice");
 
                         firebaseFirestore=FirebaseFirestore.getInstance();
-                       
+
                         firebaseFirestore.collection("AllDelivery")
                                 .document("abc@gmail.com")
                                 .get()
