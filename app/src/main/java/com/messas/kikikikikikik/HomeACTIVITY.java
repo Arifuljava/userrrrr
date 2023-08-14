@@ -351,7 +351,7 @@ public class HomeACTIVITY extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(getApplicationContext(),WishlistActivity.class));
                 break;
             case R.id.cartliost:
-                startActivity(new Intent(getApplicationContext(),Cart2Activity.class));
+                startActivity(new Intent(getApplicationContext(),CartActivity.class));
                 break;
             case R.id.history:
                 startActivity(new Intent(getApplicationContext(),OrderHistoryActivity.class));

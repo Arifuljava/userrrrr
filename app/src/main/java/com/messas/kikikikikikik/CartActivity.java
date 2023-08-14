@@ -19,6 +19,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -128,6 +129,7 @@ public class CartActivity extends AppCompatActivity {
         populateRecyclerView();
 
 
+
     }
     double alldelivery=0;
     double allmain=0;
@@ -138,6 +140,7 @@ public class CartActivity extends AppCompatActivity {
         Log.d(TAG,"Populate Recycler view called");
 
 
+        /*
         Query query = firebaseFirestore.collection("Cart").document(user.get(UserSession.KEY_EMAIL))
                 .collection(user.get(UserSession.KEY_NAME)+" Cart");
 
@@ -176,6 +179,91 @@ public class CartActivity extends AppCompatActivity {
 
             }
         });
+         */
+        Query query = firebaseFirestore.collection("Cart").document(user.get(UserSession.KEY_EMAIL))
+                .collection(user.get(UserSession.KEY_NAME) + " Cart");
+
+        query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    cartcollect.clear();
+                    totalcost = 0;
+                    totalproducts = 0;
+                    allmain = 0;
+                    coount = 0;
+
+                    if (task.getResult().size() == 0) {
+                        tv_no_item.setVisibility(View.GONE);
+                        activitycartlist.setVisibility(View.GONE);
+                        emptycart.setVisibility(View.VISIBLE);
+                        return;
+                    }
+
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d(TAG, document.getId() + " => " + document.getData());
+                        SingleProductModel model = document.toObject(SingleProductModel.class);
+
+                        // Check for duplicates before adding to the list
+                        boolean isDuplicate = false;
+                        for (SingleProductModel existingModel : cartcollect) {
+                            if (existingModel.getPrimage().equals(model.getPrname())) {
+                                isDuplicate = true;
+                                break;
+                            }
+                        }
+
+                        if (!isDuplicate) {
+                            cartcollect.add(model);
+                            Toast.makeText(CartActivity.this, ""+cartcollect, Toast.LENGTH_SHORT).show();
+                            firebaseFirestore=FirebaseFirestore.getInstance();
+                            int priddd=model.getPrid();
+                            String ddd=""+priddd;
+
+                            /////
+                            firebaseFirestore.collection("AllDelivery")
+                                    .document("abc@gmail.com")
+                                    .get()
+                                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                if (task.getResult().exists()) {
+                                                    coount++;
+                                                    String indi=task.getResult().getString("charge");
+                                                    alldelivery=Double.parseDouble(task.getResult().getString("charge"));
+                                                    totalcost += (model.getNo_of_items()*Float.parseFloat(model.getPrprice()));
+                                                    if (coount==1) {
+                                                        totalcost=(Float.parseFloat(String.valueOf(alldelivery)))+totalcost;
+                                                    }
+                                                    totalproducts += model.getNo_of_items();
+                                                    allmain += (model.getNo_of_items()*Float.parseFloat(model.getPrprice()));
+                                                    //cartcollect.add(model);
+
+                                                    no_of_items_tv.setText("No. of Items- "+totalproducts);
+                                                    total_amount_tv.setText("Delivery Charge : "+alldelivery+"\nProducts Price : "+allmain+"\nTotal Amount- ৳"+totalcost);
+
+                                                    checkout.setVisibility(View.VISIBLE);
+                                                    details_layout.setVisibility(View.VISIBLE);
+
+
+
+
+                                                }
+                                            }
+                                        }
+                                    });
+                            /////
+
+                        }
+                    }
+
+                } else {
+                    Log.d(TAG, "Error getting documents.", task.getException());
+                }
+            }
+        });
+
 
         Log.d(TAG,"Creating Response");
 
@@ -185,18 +273,19 @@ public class CartActivity extends AppCompatActivity {
 
         Log.d(TAG,"Response Created");
         Log.d(TAG,"Getting Data");
+
         //Say Hello to our new FirebaseUI android Element, i.e., FirebaseRecyclerAdapter
         adapter =new FirestoreRecyclerAdapter<SingleProductModel, CartActivity.MovieViewHolder>(response) {
+
             @Override
             protected void onBindViewHolder(@NonNull CartActivity.MovieViewHolder viewHolder, final int position, @NonNull SingleProductModel model) {
                 Log.d(TAG,"onBindViewHolder called for: "+position);
 
+
                 if(tv_no_item.getVisibility()== View.VISIBLE){
                     tv_no_item.setVisibility(View.GONE);
                 }
-                firebaseFirestore=FirebaseFirestore.getInstance();
-                int priddd=model.getPrid();
-                String ddd=""+priddd;
+
                 firebaseFirestore.collection("AllDelivery")
                         .document("abc@gmail.com")
                         .get()
@@ -214,26 +303,7 @@ public class CartActivity extends AppCompatActivity {
                                         viewHolder.cardcount.setText("Quantity : "+model.getNo_of_items());
                                         viewHolder.totalCardAmt.setText("৳ "+model.getPrprice()+" x "+model.getNo_of_items()+" = ৳ "+(Float.valueOf(model.getPrprice())*model.getNo_of_items()));
                                         Picasso.get().load(model.getPrimage()).into(viewHolder.cardimage);
-                                        topAnimation = AnimationUtils.loadAnimation(CartActivity.this, R.anim.splash_top_animation);
-                                        bottomAnimation = AnimationUtils.loadAnimation(CartActivity.this, R.anim.splash_bottom_animation);
-                                        startAnimation = AnimationUtils.loadAnimation(CartActivity.this, R.anim.splash_start_animation);
-                                        endAnimation = AnimationUtils.loadAnimation(CartActivity.this, R.anim.splash_end_animation);
-                                        viewHolder.linearlayouttt.setAnimation(topAnimation);
 
-
-                                        totalcost += (model.getNo_of_items()*Float.parseFloat(model.getPrprice()));
-                                       if (coount==1) {
-                                           totalcost=(Float.parseFloat(String.valueOf(alldelivery)))+totalcost;
-                                       }
-                                        totalproducts += model.getNo_of_items();
-                                        allmain += (model.getNo_of_items()*Float.parseFloat(model.getPrprice()));
-                                        cartcollect.add(model);
-
-                                        no_of_items_tv.setText("No. of Items- "+totalproducts);
-                                        total_amount_tv.setText("Delivery Charge : "+alldelivery+"\nProducts Price : "+allmain+"\nTotal Amount- ৳"+totalcost);
-
-                                        checkout.setVisibility(View.VISIBLE);
-                                        details_layout.setVisibility(View.VISIBLE);
 
 
                                         viewHolder.carddelete.setOnClickListener(new View.OnClickListener() {
@@ -276,13 +346,7 @@ public class CartActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(adapter);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Log.d(TAG, String.valueOf(response.getSnapshots()));
 
-            }
-        },10000);
 
 
     }
