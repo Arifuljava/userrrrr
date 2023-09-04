@@ -19,8 +19,8 @@ android {
         applicationId "com.messas.bdshopbazargardennurserybd"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 45
-        versionName "45.0"
+        versionCode 588
+        versionName "588.0"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
